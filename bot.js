@@ -10,6 +10,11 @@ client.on('message', message => {
     	message.channel.send(':heart: هلا بيك منور سيرفرنا :heart:');
   	}
 });
+client.on('message', message => {
+    if (message.content === '$help') {
+    	message.channel.send('وصلت لك رساله على خاص :incoming_envelope: ');
+  	}
+});
 
 client.on('message', message => {
     if (message.content === 'Back') {
@@ -48,6 +53,21 @@ if (message.content === '$help') {
   message.author.sendEmbed(embed);
     }
 });
+client.on('message', message => {
+  if (message.author.bot) return;
+  if (!message.content.startsWith(prefix)) return;
+
+  let command = message.content.split(" ")[0];
+  command = command.slice(prefix.length);
+
+  let args = message.content.split(" ").slice(1);
+
+  if (command == "$say") {
+   message.channel.sendMessage(args.join("  "))
+   message.delete()
+  }
+ });
+
 
 // THIS  MUST  BE  THIS  WAY
 client.login(process.env.BOT_TOKEN);
