@@ -3,17 +3,22 @@ const client = new Discord.Client();
 
 client.on('ready', () => {
     console.log('I am ready!');
-});
-client.on('ready', () => {
-   console.log(`----------------`);
-      console.log(`Desert Bot- Scrpit By ┃ KillerFox`);
-        console.log(`----------------`);
-      console.log(`ON ${client.guilds.size} Servers '     Bot By ┃ KillerFox ' `);
-    console.log(`----------------`);
-  console.log(`Logged in as ${client.user.tag}!`);
-client.user.setGame(` Bot By KillerFox | ~help `,"http://twitch.tv/S-F")
-client.user.setStatus("dnd")
-});
+
+
+
+
+
+
+
+const yt = require('ytdl-core');
+const ytdl = require('ytdl-core');
+const request = require('request');
+const getYoutubeID = require('get-youtube-id');
+const fetchVideoInfo = require('youtube-info');
+const fs = require("fs");
+const yt_api_key = "AIzaSyDeoIH0u1e72AtfpwSKKOSy3IPp2UHzqi4";//لا تغيره
+
+
 client.on('ready', function() {
 	console.log(`i am ready ${client.user.username}`);
 });
@@ -242,6 +247,21 @@ client.on('message', function(message) {
 		return str.toLowerCase().indexOf('youtube.com') > -1;
 	}
 });
+});
+client.on('ready', () => {
+   console.log(`----------------`);
+      console.log(`Desert Bot- Scrpit By ┃ KillerFox`);
+        console.log(`----------------`);
+      console.log(`ON ${client.guilds.size} Servers '     Bot By ┃ KillerFox ' `);
+    console.log(`----------------`);
+  console.log(`Logged in as ${client.user.tag}!`);
+client.user.setGame(` Bot By KillerFox | ~help `,"http://twitch.tv/S-F")
+client.user.setStatus("dnd")
+});
+client.on('ready', function() {
+	console.log(`i am ready ${client.user.username}`);
+});
+
 client.on('message', message => {
      if (message.content === "~servers") {
      let embed = new Discord.RichEmbed()
