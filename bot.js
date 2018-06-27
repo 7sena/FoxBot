@@ -4,6 +4,17 @@ const client = new Discord.Client();
 client.on('ready', () => {
     console.log('I am ready!');
 });
+client.on('ready', () => {
+   console.log(`----------------`);
+      console.log(`Desert Bot- Scrpit By ┃ KillerFox`);
+        console.log(`----------------`);
+      console.log(`ON ${client.guilds.size} Servers '     Bot By ┃ KillerFox ' `);
+    console.log(`----------------`);
+  console.log(`Logged in as ${client.user.tag}!`);
+client.user.setGame(` => عيد سعيد <= `,"http://twitch.tv/S-F")
+client.user.setStatus("dnd")
+});
+
 client.on('message', function(msg) {
 if(msg.content.startsWith ('~Waht')) {
       let embed = new Discord.RichEmbed()
