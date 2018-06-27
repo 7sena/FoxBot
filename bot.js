@@ -16,7 +16,6 @@ client.user.setStatus("dnd")
 });
 client.on("message", message => {
 
-
             if (message.content.startsWith(prefix + "~bc")) {
                          if (!message.member.hasPermission("ADMINISTRATOR"))  return;
   let args = message.content.split(" ").slice(1);
@@ -24,7 +23,7 @@ client.on("message", message => {
   message.guild.members.filter(m => m.presence.status !== 'offline').forEach(m => {
  m.send(`${argresult}\n ${m}`);
 })
- message.channel.send(`\`${message.guild.members.filter(m => m.presence.status !== 'online').size}\`` : لقد ارسلت رساله لجميع اعضاء عدد الاعضاء المستلمين ``); 
+ message.channel.send(`\`${message.guild.members.filter(m => m.presence.status !== 'online').size}\` : عدد الاعضاء المستلمين`); 
  message.delete(); 
 };     
 });
