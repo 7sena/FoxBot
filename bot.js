@@ -11,7 +11,7 @@ client.on('ready', () => {
       console.log(`ON ${client.guilds.size} Servers '     Bot By ┃ KillerFox ' `);
     console.log(`----------------`);
   console.log(`Logged in as ${client.user.tag}!`);
-client.user.setGame(` => عيد سعيد <= `,"http://twitch.tv/S-F")
+client.user.setGame(` Bot By KillerFox | ~help `,"http://twitch.tv/S-F")
 client.user.setStatus("dnd")
 });
 
