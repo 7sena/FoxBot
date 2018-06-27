@@ -14,9 +14,6 @@ client.on('ready', () => {
 client.user.setGame(` Bot By KillerFox | ~help `,"http://twitch.tv/S-F")
 client.user.setStatus("dnd")
 });
-client.on('ready', function() {
-	console.log(`i am ready ${client.user.username}`);
-});
 
 client.on('message', message => {
      if (message.content === "~servers") {
