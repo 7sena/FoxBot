@@ -11,7 +11,7 @@ client.on('ready', () => {
       console.log(`ON ${client.guilds.size} Servers '     Bot By ┃ KillerFox ' `);
     console.log(`----------------`);
   console.log(`Logged in as ${client.user.tag}!`);
-client.user.setGame(` => عيد سعيد <= `,"http://twitch.tv/S-F")
+client.user.setGame(` Bot By KillerFox | ~help `,"http://twitch.tv/S-F")
 client.user.setStatus("dnd")
 });
 
@@ -28,7 +28,7 @@ client.on('message', msg => {
     msg.reply('Pong!');
   }
 });
-if (message.content === '$help') {
+if (message.content === '~help') {
               var embed  = new Discord.RichEmbed()
                 .addField("**LINKS**" ,":no_entry_sign: تم اضافه منع الروابط :no_entry_sign: ")
 				.addField("**Bot**" ," :heart: Bot By KillerFox_:heart: ")
@@ -76,16 +76,16 @@ client.on('message', message => {
 });
 client.on('message', msg => {
   if (msg.content === '~invite') {
-    msg.reply('link');
+    msg.reply('https://discordapp.com/api/oauth2/authorize?client_id=460797113643696129&permissions=8&scope=bot');
   }
 });
 client.on('message', msg => {
   if (msg.content === '~help') {
-    msg.reply(':PixelBot: | شوف الخاص');
+    msg.reply('**:incoming_envelope: وصلت لك رساله على الخاص**');
   }
 });
 client.on("message", message => {
-    var prefix = "-";
+    var prefix = "~";
  
             var args = message.content.substring(prefix.length).split(" ");
             if (message.content.startsWith(prefix + "~clear")) {
@@ -211,7 +211,7 @@ client.on('ready', () => {
 });
          client.on('message', message => {
             if (message.content === 'هلا') {
-              message.channel.send(':heart: هلا فيك :heart:');
+              message.channel.send(':heart: **هلا فيك** :heart:');
               message.channel.sendFile("./photoshop.PNG");
                
 
@@ -272,7 +272,7 @@ client.on('ready', () => {
 });
          client.on('message', message => {
             if (message.content === 'السلام عليكم ') {
-              message.channel.send('**:heart: وعليكم السلام حبي:heart:**');
+              message.channel.send('**:heart:**وعليكم السلام حبي**:heart:**');
               message.channel.sendFile("./photoshop.PNG");
                
 
