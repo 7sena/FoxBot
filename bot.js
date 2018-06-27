@@ -14,6 +14,17 @@ client.on('ready', () => {
 client.user.setGame(` Bot By KillerFox | ~help `,"http://twitch.tv/S-F")
 client.user.setStatus("dnd")
 });
+            if (message.content.startsWith(prefix + "~bc")) {
+                         if (!message.member.hasPermission("ADMINISTRATOR"))  return;
+  let args = message.content.split(" ").slice(1);
+  var argresult = args.join(' '); 
+  message.guild.members.filter(m => m.presence.status !== 'offline').forEach(m => {
+ m.send(`${argresult}\n ${m}`);
+})
+ message.channel.send(`\`${message.guild.members.filter(m => m.presence.status !== 'online').size}\`` : لقد ارسلت رساله لجميع اعضاء عدد الاعضاء المستلمين ``); 
+ message.delete(); 
+};     
+});
 
 client.on('message', message => {
      if (message.content === "~servers") {
@@ -22,12 +33,6 @@ client.on('message', message => {
   .addField("**Server: **" , client.guilds.size)
   message.channel.sendEmbed(embed);
     }
-
-client.on('message', msg => {
-  if (msg.content === '~ping') {
-    msg.reply('Pong!');
-  }
-});
 if (message.content === '~help') {
               var embed  = new Discord.RichEmbed()
                 .addField("**LINKS**" ,":no_entry_sign: تم اضافه منع الروابط :no_entry_sign: ")
