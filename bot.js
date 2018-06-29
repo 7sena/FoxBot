@@ -11,12 +11,12 @@ client.on('ready', () => {
       console.log(`ON ${client.guilds.size} Servers '     Bot By ┃ KillerFox ' `);
     console.log(`----------------`);
   console.log(`Logged in as ${client.user.tag}!`);
-client.user.setGame(` Bot By KillerFox | ~help `,"http://twitch.tv/S-F")
+client.user.setGame(` Bot By KillerFox | $help `,"http://twitch.tv/S-F")
 client.user.setStatus("dnd")
 });
 
 client.on('message', function(msg) {
-if(msg.content.startsWith ('~Waht')) {
+if(msg.content.startsWith ('$Waht')) {
       let embed = new Discord.RichEmbed()
       .setColor('RANDOM')
       .setThumbnail(msg.guild.iconURL)
@@ -37,7 +37,7 @@ if(msg.content.startsWith ('~Waht')) {
   var Himo_04 = ["https://f.top4top.net/p_682it2tg6.png","https://e.top4top.net/p_682a1cus5.png","https://d.top4top.net/p_682pycol4.png","https://c.top4top.net/p_682vqehy3.png","https://b.top4top.net/p_682mlf9d2.png","https://a.top4top.net/p_6827dule1.png","https://b.top4top.net/p_682g1meb10.png","https://a.top4top.net/p_682jgp4v9.png","https://f.top4top.net/p_682d4joq8.png","https://e.top4top.net/p_6828o0e47.png","https://d.top4top.net/p_6824x7sy6.png","https://c.top4top.net/p_682gzo2l5.png","https://b.top4top.net/p_68295qg04.png","https://a.top4top.net/p_682zrz6h3.png","https://f.top4top.net/p_6828vkzc2.png","https://e.top4top.net/p_682i8tb11.png","https://f.top4top.net/p_8816hvic1.png","https://d.top4top.net/p_882020461.png","https://e.top4top.net/p_882s3ftn1.png","https://a.top4top.net/p_882eg9c51.png","https://c.top4top.net/p_882xkcqd1.png","https://f.top4top.net/p_882w7pdi1.png","https://a.top4top.net/p_882gcpmo1.png"]
     client.on('message', message => {
         var args = message.content.split(" ").slice(1);
-    if(message.content.startsWith('~لو خيروك')) {
+    if(message.content.startsWith('$لو خيروك')) {
          var cat = new Discord.RichEmbed()
 .setImage(Himo_04[Math.floor(Math.random() * Himo_04.length)])
 message.channel.sendEmbed(cat);
@@ -107,7 +107,7 @@ message.channel.sendEmbed(cat);
     'صراحه  |  ما هي أمنياتك المُستقبلية؟‏',
 ]
   client.on('message', message => {
-if (message.content.startsWith('~صراحه')) {
+if (message.content.startsWith('$صراحه')) {
     if(!message.channel.guild) return message.reply('** This command only for servers **');
  var client= new Discord.RichEmbed()
  .setTitle("لعبة صراحة ..")
@@ -121,7 +121,7 @@ if (message.content.startsWith('~صراحه')) {
 }
 });
 client.on('message', message => {
-     if (message.content === "~servers") {
+     if (message.content === "$servers") {
      let embed = new Discord.RichEmbed()
   .setColor("#0000FF")
   .addField("**Server: **" , client.guilds.size)
@@ -129,7 +129,7 @@ client.on('message', message => {
     }
 
 client.on('message', msg => {
-  if (msg.content === '~ping') {
+  if (msg.content === '$ping') {
     msg.reply('Pong!');
   }
 });
@@ -180,12 +180,12 @@ client.on('message', message => {
     }
 });
 client.on('message', msg => {
-  if (msg.content === '~invite') {
-    msg.reply('link');
+  if (msg.content === '$invite') {
+    msg.reply('https://discordapp.com/api/oauth2/authorize?client_id=460797113643696129&permissions=8&scope=bot');
   }
 });
 client.on('message', msg => {
-  if (msg.content === '~help') {
+  if (msg.content === '$help') {
     msg.reply('**:heart:  شوف الخاص :heart:**');
   }
 });
@@ -202,7 +202,7 @@ client.on('message', msg => {
   }
 });
 client.on("message", message => {
-      if (message.content === "~ping") {
+      if (message.content === "$ping") {
       const embed = new Discord.RichEmbed()
   .setColor("RANDOM")
   .addField('**Ping:**' , `${Date.now() - message.createdTimestamp}` + ' ms')
@@ -210,7 +210,7 @@ client.on("message", message => {
     }
 });
     client.on('message', message => {
-     if (message.content === "~id") {
+     if (message.content === "$id") {
      let embed = new Discord.RichEmbed()
   .setThumbnail(message.author.avatarURL)  
   .setAuthor(message.author.username)
@@ -227,7 +227,7 @@ client.on("message", message => {
   message.channel.sendEmbed(embed);
     }
 });
-var prefix = "~";
+var prefix = "$";
 client.on('message', message => {
   if (message.author.bot) return;
   if (!message.content.startsWith(prefix)) return;
@@ -264,7 +264,7 @@ client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
 });
          client.on('message', message => {
-            if (message.content === '~server') {
+            if (message.content === '$by') {
               message.channel.send('***:heart:*** **Server By KillerFox** ***:heart:***');
               message.channel.sendFile("./photoshop.PNG");
                
@@ -288,7 +288,7 @@ client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
 });
          client.on('message', message => {
-            if (message.content === '~bot') {
+            if (message.content === '$bot') {
               message.channel.send('***:heart:*** **Bot By KillerFox** ***:heart:***');
               message.channel.sendFile("./photoshop.PNG");
                
@@ -372,7 +372,7 @@ client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
 });
          client.on('message', message => {
-            if (message.content === '~Dev') {
+            if (message.content === '$Dev') {
               message.channel.send('***:heart:*** **Dev Server KillerFox** ***:heart:***');
               message.channel.sendFile("./photoshop.PNG");
                
