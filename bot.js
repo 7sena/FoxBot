@@ -128,11 +128,6 @@ client.on('message', message => {
   message.channel.sendEmbed(embed);
     }
 
-client.on('message', msg => {
-  if (msg.content === '$ping') {
-    msg.reply('Pong!');
-  }
-});
 if (message.content === '$help') {
               var embed  = new Discord.RichEmbed()
                 .addField("**LINKS**" ,":no_entry_sign: تم اضافه منع الروابط :no_entry_sign: ")
@@ -197,17 +192,9 @@ client.on('message', message => {
     }
 });
 client.on('message', msg => {
-  if (msg.content === '~suppport') {
+  if (msg.content === '$suppport') {
     msg.reply('السيرفر للمساعده,https://discord.gg/a5T4zQ');
   }
-});
-client.on("message", message => {
-      if (message.content === "$ping") {
-      const embed = new Discord.RichEmbed()
-  .setColor("RANDOM")
-  .addField('**Ping:**' , `${Date.now() - message.createdTimestamp}` + ' ms')
-  message.channel.sendEmbed(embed);
-    }
 });
     client.on('message', message => {
      if (message.content === "$id") {
