@@ -280,7 +280,7 @@ client.on('ready', () => {
   }
 });
   client.on("message", message => {
- if (message.content === "$help2") {
+ if (message.content === "$help1") {
   const embed = new Discord.RichEmbed()
       .setColor("RANDOM")
       .setFooter('─═════════ {✯FoxBot✯} ════════════─')
