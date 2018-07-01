@@ -128,11 +128,6 @@ client.on('message', message => {
   message.channel.sendEmbed(embed);
     }
 
-client.on('message', msg => {
-  if (msg.content === '$ping') {
-    msg.reply('Pong!');
-  }
-});
 if (message.content === '$help2') {
               var embed  = new Discord.RichEmbed()
                 .addField("**LINKS**" ,":no_entry_sign: تم اضافه منع الروابط :no_entry_sign: ")
