@@ -68,6 +68,30 @@ client.on('guildMemberAdd', member => {
    
       channel.sendEmbed(embed);
     });
+  client.on("message", message => {
+ if (message.content === "$help-js-bc") {
+  const embed = new Discord.RichEmbed()
+      .setColor("RANDOM")
+      .setFooter('─═════════ {✯FoxBot✯} ════════════─')
+	  .addField('**$help-js-bc-1 ➺',` ⦁ جميع البرودكاست  ⦁**`)
+      .setFooter('─═════════ {✯FoxBot✯} ════════════─')
+  message.author.send({embed});
+  }
+});
+
+  client.on("message", message => {
+ if (message.content === "$help-js-bc-1") {
+  const embed = new Discord.RichEmbed()
+      .setColor("RANDOM")
+      .setFooter('─═════════ {✯FoxBot✯} ════════════─')
+	  .addField('**❖ برودكاست + للكل + مطور ➺',` ⦁  https://hastebin.com/bipanureqa.js ⦁**`)
+	  .addField('**❖ برودكاست + للكل + غير مطور ➺',` ⦁  https://hastebin.com/kuvoruzowe.cs ⦁**`)
+	  .addField('**❖  برودكاست + للأونلاين + مع منشن + غير مطور ➺',` ⦁  https://hastebin.com/zujuvupali.php ⦁**`)
+	  .addField('**❖ برودكاست + للكل + مع منشن + غير مطور ➺',` ⦁  https://hastebin.com/zojokunayo.php ⦁**`)
+      .setFooter('─═════════ {✯FoxBot✯} ════════════─')
+  message.author.send({embed});
+  }
+});
     
     client.on('guildMemberRemove', member => {
         var embed = new Discord.RichEmbed()
@@ -184,21 +208,21 @@ if (message.content === '$help2') {
                 .addField("**LINKS**" ,":no_entry_sign: تم اضافه منع الروابط :no_entry_sign: ")
 				.addField("**Bot**" ," :heart: Bot By KillerFox_:heart: ")
                 .addField("broadcast (bc)" ,"**الاستخدام:** ``~broadcast <الرساله> , $bc <الرساله>``")
-                .addField("**BAN**" ,"**الاستخدام:** ``~ban <المستخدم>``")
-                .addField("**KICK**" ,"**الاستخدام:** ``~kick <المستخدم> ``")
-                .addField("**ِAVATAR**" ,"**الاستخدام:** ``~avatar``")
-                .addField("**INFO**", "**الأستخدام :** ``~info``")
-                .addField("**SAY**" ,"**الاستخدام:** ``~say <الرساله>``")
-                .addField("**ID**" ,"**ال��ستخدام:** ``~id``")
-                .addField("**SERVER**" ,"**الاستخدام:** ``~server``")
-                .addField("**INVITE**" ,"**الاستخدام:** ``~invite <لأضافه البوت لأى سيرفر>``")
-                .addField("**SUPPORT**" ,"**الاستخدام:** ``~suppport <سيرفر دعم الفنى>``")
-                .addField("**QA**" ,"**الاستخدام:** ``~qa <السؤال>``  ")
-                .addField("**CLEAR**" ,"**الاستخدام:** ``~clear <العدد>``")
-                .addField("**PING**", "**الأستخدام:** ``~ping``")
-                .addField("**SERVERNAME**", "**الأستخدام:** ``~servername``")
-                .addField("**CUT_TWEET**", "**الاستخدام** ``~ct``")
-                .addField("**TWEET**", "**الاستخدام** ``~tweet <الرساله>``")
+                .addField("**BAN**" ,"**الاستخدام:** ``$ban <المستخدم>``")
+                .addField("**KICK**" ,"**الاستخدام:** ``$kick <المستخدم> ``")
+                .addField("**ِAVATAR**" ,"**الاستخدام:** ``$avatar``")
+                .addField("**INFO**", "**الأستخدام :** ``$info``")
+                .addField("**SAY**" ,"**الاستخدام:** ``$say <الرساله>``")
+                .addField("**ID**" ,"**ال��ستخدام:** ``$id``")
+                .addField("**SERVER**" ,"**الاستخدام:** ``$server``")
+                .addField("**INVITE**" ,"**الاستخدام:** ``$invite <لأضافه البوت لأى سيرفر>``")
+                .addField("**SUPPORT**" ,"**الاستخدام:** ``$suppport <سيرفر دعم الفنى>``")
+                .addField("**QA**" ,"**الاستخدام:** ``$qa <السؤال>``  ")
+                .addField("**CLEAR**" ,"**الاستخدام:** ``$clear <العدد>``")
+                .addField("**PING**", "**الأستخدام:** ``$ping``")
+                .addField("**SERVERNAME**", "**الأستخدام:** ``$servername``")
+                .addField("**CUT_TWEET**", "**الاستخدام** ``$ct``")
+                .addField("**TWEET**", "**الاستخدام** ``$tweet <الرساله>``")
                 .addField("**NO INVITE LINKE**","تم اضافة خاصية منع الانفيتات ")
                 .addField("**LOGIN**" , " تم اضافة خاصية التفعيل لطلب تشغيلها في السيرفر كلم المبيرمجين ")
                 .setColor('RANDOM')
@@ -207,7 +231,7 @@ if (message.content === '$help2') {
     }
 });
 client.on('message', message => {
-  if(message.content === ('clear')) {
+  if(message.content === ('$clear')) {
   let modRole = message.guild.roles.find("name", "Admin");
   if (!modRole) return message.reply('You do not have Admin Role'); {
     }
@@ -326,7 +350,7 @@ client.on('ready', () => {
   }
 });
   client.on("message", message => {
- if (message.content === "$help1") {
+ if (message.content === "$help2") {
   const embed = new Discord.RichEmbed()
       .setColor("RANDOM")
       .setFooter('─═════════ {✯FoxBot✯} ════════════─')
@@ -350,18 +374,6 @@ client.on('ready', () => {
   }
 });
 
-  client.on("message", message => {
- if (message.content === "$help-js-source") {
-  const embed = new Discord.RichEmbed()
-      .setColor("RANDOM")
-      .setFooter('─═════════ {✯FoxBot✯} ════════════─')
-	  .addField('**$help-js-source ➺ ⦁ قسم السورس الأساسي ⦁**')
-	  .addField('**$help-js-bc ➺ ⦁ قسم أكواد البرودكاست ⦁**')
-	  .addField('**$help-js-welcome ➺ ⦁ قسم أكواد الترحيب ⦁**')
-      .setFooter('─═════════ {✯FoxBot✯} ════════════─')
-  message.author.send({embed});
-  }
-});
    client.on("message", message => {
  if (message.content === "$help-js-source") {
   const embed = new Discord.RichEmbed()
