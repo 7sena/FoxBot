@@ -203,7 +203,7 @@ client.on('message', message => {
   message.channel.sendEmbed(embed);
     }
 
-if (message.content === '$help2') {
+if (message.content === '$help1') {
               var embed  = new Discord.RichEmbed()
                 .addField("**LINKS**" ,":no_entry_sign: تم اضافه منع الروابط :no_entry_sign: ")
 				.addField("**Bot**" ," :heart: Bot By KillerFox_:heart: ")
