@@ -33,6 +33,28 @@ if(msg.content.startsWith ('$server')) {
       msg.channel.send({embed:embed});
     }
   });
+client.on('guildMemberAdd', member => {
+    let channel = member.guild.channels.find('name', '❤❤𝓦𝓔𝓛𝓒𝓞𝓜𝓔❤❤');
+    let memberavatar = member.user.avatarURL
+      if (!channel) return;
+    let embed = new Discord.RichEmbed()
+        .setColor('RANDOM')
+        .setThumbnail(memberavatar)
+        .addField(':running_shirt_with_sash: | name :  ',`${member}`)
+        .addField(':loudspeaker: | اطلق من دخل' , `Welcome to the server, ${member}`)
+        .addField(':id: | user :', "**[" + `${member.id}` + "]**" )
+        .addField('➡| انت العضو رقم',`${member.guild.memberCount`)
+	    .addField('====اهلن وسهلن فيك شرفتنا و  اتمنه اشتراك في قناتي https://www.youtube.com/channel/UCBW966zD3VMKQzHhpRfA2nQ ====', 'https://cdn.discordapp.com/attachments/397818254439219217/399292026782351381/shy.png')
+               
+                  .addField("Name:",`<@` + `${member.id}` + `>`, true)
+                     
+                                     .addField(' الـسيرفر', `${member.guild.name}`,true)
+                                       
+        .setFooter('─═════════ {✯شرفتنا يا اخي اتمنه تستمع معنا✯} ════════════─')
+        .setTimestamp()
+   
+      channel.sendEmbed(embed);
+    });
     client.on('guildMemberRemove', member => {
         var embed = new Discord.RichEmbed()
         .setAuthor(member.user.username, member.user.avatarURL)
@@ -41,7 +63,7 @@ if(msg.content.startsWith ('$server')) {
         .setDescription(`مع السلامه تشرفنا بك :raised_hand::skin-tone-1: :pensive: `)
         .addField(':bust_in_silhouette:   تبقي',`**[ ${member.guild.memberCount} ]**`,true)
         .setColor('RED')
-        .setFooter(`====اهلن وسهلن فيك شرفتنا و  اتمنه اشتراك في قناتي https://www.youtube.com/channel/UCBW966zD3VMKQzHhpRfA2nQ ====`, 'https://cdn.discordapp.com/attachments/397818254439219217/399292026782351381/shy.png')
+        .setFooter(`==ليه خرجت مع السلام شرفتنا==`, 'https://cdn.discordapp.com/attachments/397818254439219217/399292026782351381/shy.png')
     
     var channel =member.guild.channels.find('name', '❤❤𝓦𝓔𝓛𝓒𝓞𝓜𝓔❤❤')
     if (!channel) return;
