@@ -44,13 +44,13 @@ client.on('guildMemberAdd', member => {
         .addField(':loudspeaker: | اطلق من دخل' , `Welcome to the server, ${member}`)
         .addField(':id: | user :', "**[" + `${member.id}` + "]**" )
         .addField('➡| انت العضو رقم',`${member.guild.memberCount`)
-	    .addField('====اهلن وسهلن فيك شرفتنا و  اتمنه اشتراك في قناتي https://www.youtube.com/channel/UCBW966zD3VMKQzHhpRfA2nQ ====', 'https://cdn.discordapp.com/attachments/397818254439219217/399292026782351381/shy.png')
+	 .addField('====اهلن وسهلن فيك شرفتنا و  اتمنه اشتراك في قناتي https://www.youtube.com/channel/UCBW966zD3VMKQzHhpRfA2nQ ====', 'https://cdn.discordapp.com/attachments/397818254439219217/399292026782351381/shy.png')
                
                   .addField("Name:",`<@` + `${member.id}` + `>`, true)
                      
                                      .addField(' الـسيرفر', `${member.guild.name}`,true)
                                        
-        .setFooter('─═════════ {✯شرفتنا يا اخي اتمنه تستمع معنا✯} ════════════─')
+        .setFooter(`─═════════ {✯شرفتنا يا اخي اتمنه تستمع معنا✯} ════════════─`)
         .setTimestamp()
    
       channel.sendEmbed(embed);
