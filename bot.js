@@ -33,42 +33,8 @@ if(msg.content.startsWith ('$server')) {
       msg.channel.send({embed:embed});
     }
   });
-client.on('guildMemberAdd', member => {
-    let channel = member.guild.channels.find('name', '❤❤𝓦𝓔𝓛𝓒𝓞𝓜𝓔❤❤');
-    let memberavatar = member.user.avatarURL
-      if (!channel) return;
-    let embed = new Discord.RichEmbed()
-        .setColor('RANDOM')
-        .setThumbnail(memberavatar)
-        .addField(':running_shirt_with_sash: | name :  ',`${member}`)
-        .addField(':loudspeaker: | اطلق من دخل' , `Welcome to the server, ${member}`)
-        .addField(':id: | user :', "**[" + `${member.id}` + "]**" )
-        .addField('➡| انت العضو رقم',`${member.guild.memberCount`)
-	 .addField('====اهلن وسهلن فيك شرفتنا و  اتمنه اشتراك في قناتي https://www.youtube.com/channel/UCBW966zD3VMKQzHhpRfA2nQ ====', 'https://cdn.discordapp.com/attachments/397818254439219217/399292026782351381/shy.png')
-               
-                  .addField("Name:",`<@` + `${member.id}` + `>`, true)
-                     
-                                     .addField(' الـسيرفر', `${member.guild.name}`,true)
-                                       
-        .setFooter(`─═════════ {✯شرفتنا يا اخي اتمنه تستمع معنا✯} ════════════─`)
-        .setTimestamp()
-   
-      channel.sendEmbed(embed);
-    });
-    client.on('guildMemberRemove', member => {
-        var embed = new Discord.RichEmbed()
-        .setAuthor(member.user.username, member.user.avatarURL)
-        .setThumbnail(member.user.avatarURL)
-        .setTitle(`بس بعرف وين رحت؟؟؟ :raised_hand::skin-tone-1: :pensive:`)
-        .setDescription(`مع السلامه تشرفنا بك :raised_hand::skin-tone-1: :pensive: `)
-        .addField(':bust_in_silhouette:   تبقي',`**[ ${member.guild.memberCount} ]**`,true)
-        .setColor('RED')
-        .setFooter(`==ليه خرجت مع السلام شرفتنا==`, 'https://cdn.discordapp.com/attachments/397818254439219217/399292026782351381/shy.png')
-    
-    var channel =member.guild.channels.find('name', '❤❤𝓦𝓔𝓛𝓒𝓞𝓜𝓔❤❤')
-    if (!channel) return;
-    channel.send({embed : embed});
-    })
+
+
 
     client.on('message', msg => { 
       if (msg.content.startsWith(`$sug`)) {
@@ -244,7 +210,7 @@ if (message.content === '$help1') {
               var embed  = new Discord.RichEmbed()
                 .addField("**LINKS**" ,":no_entry_sign: تم اضافه منع الروابط :no_entry_sign: ")
 				.addField("**Bot**" ," :heart: Bot By KillerFox_:heart: ")
-                .addField("broadcast (bc)" ,"**الاستخدام:** ``~broadcast <الرساله> , $bc <الرساله>``")
+                .addField("broadcast (bc)" ,"**الاستخدام:** `` <الرساله> , $bc <الرساله>``")
                 .addField("**BAN**" ,"**الاستخدام:** ``$ban <المستخدم>``")
                 .addField("**KICK**" ,"**الاستخدام:** ``$kick <المستخدم> ``")
                 .addField("**ِAVATAR**" ,"**الاستخدام:** ``$avatar``")
@@ -254,23 +220,24 @@ if (message.content === '$help1') {
                 .addField("**SERVER**" ,"**الاستخدام:** ``$server``")
                 .addField("**INVITE**" ,"**الاستخدام:** ``$invite <لأضافه البوت لأى سيرفر>``")
                 .addField("**SUPPORT**" ,"**الاستخدام:** ``$suppport <سيرفر دعم الفنى>``")
-                .addField("**QA**" ,"**الاستخدام:** ``$qa <السؤال>``  ")
+                .addField("**sug**" ,"**الاستخدام:** ``$Sug <اقتراح>``  ")
                 .addField("**CLEAR**" ,"**الاستخدام:** ``$clear <العدد>``")
                 .addField("**PING**", "**الأستخدام:** ``$ping``")
                 .addField("**SERVERNAME**", "**الأستخدام:** ``$servername``")
-                .addField("**CUT_TWEET**", "**الاستخدام** ``$ct``")
+                .addField("**sra7a**", "**الاستخدام** ``$صراحه``")
+                .addField("**Lw_5erok**", "**الاستخدام** ``$لو خيروك``")
                 .addField("**TWEET**", "**الاستخدام** ``$tweet <الرساله>``")
                 .addField("**NO INVITE LINKE**","تم اضافة خاصية منع الانفيتات ")
                 .addField("**LOGIN**" , " تم اضافة خاصية التفعيل لطلب تشغيلها في السيرفر كلم المبيرمجين ")
-                .setColor('RANDOM')
-.setColor('RANDOM')
+                .setColor('RED')
+.setColor('RED')
   message.author.sendEmbed(embed);
     }
 });
 client.on('message', message => {
   if(message.content === ('$clear')) {
   let modRole = message.guild.roles.find("name", "Admin");
-  if (!modRole) return message.reply('You do not have Admin Role'); {
+  if (!modRole) return message.reply('**ما عندك صلاحيه**'); {
     }
   const params = message.content.split(" ").slice(1)
     let messagecount = parseInt(params[0]);
