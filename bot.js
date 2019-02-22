@@ -750,7 +750,14 @@ if (message.content === '$help') {
       .addField("**:video_game: اوامر تشغيل الالعاب**","** **")
         .addField("**$hack **","**لعبه تهكير اصدقاءك للمزاح**")
         .addField("**$pubg **","**لعبه اسئله باتل جرواند ببجي**")
-        .addField("**$e**","**لكتابه اي اسم  في ايمبت بدون ايموجي**")
+        .addField("**$e**","**لعبة ماين كرافت**")
+        .addField("**$em**","**لكتابه اي اسم   ايبد**")
+        .addField("**$mc**","**لكتابه اي اسم   على شكل ايموجي**")
+        .addField("**$خواطر**","**لعبة خواطر**")
+        .addField("**$لو خيروك**","**لعبة لو خيروك**")
+        .addField("**$صراحه**","**صراحه**")
+        .addField("**$حب**","**لعبة حب**")
+        .addField("**$حكم**","**لعبة حكم**")
 .setColor('RANDOM')
   message.author.sendEmbed(embed);
     }
@@ -828,6 +835,8 @@ if (message.content === '$help') {
 });
 
 
+
+
 client.on("message", msg => {
   if(msg.content === '$' + "id") {
       const embed = new Discord.RichEmbed();
@@ -859,7 +868,9 @@ if (message.content === '$help') {
       .addField("**$ban  :outbox_tray:**","**لـ حظر عضو**")
         .addField("**$say**","**لتكلم بصفه البوت**")
         .addField("**$cv**","**عمل روم صوتي**")
-        .addField("**$ct**","**عمل روم صوتي**")
+        .addField("**$owner**","**مبرمج البوت**")
+        .addField("**$role**","**سحب رتبه واعاء رتبه**")
+        .addField("**$ct**","**عمل روم كاتبي**")
 .setColor('RANDOM')
   message.author.sendEmbed(embed);
     }
@@ -1125,7 +1136,7 @@ client.on("message", message => {
 	var args = message.content.split(' ').slice(1); 
 	var msg = message.content.toLowerCase();
 	if( !message.guild ) return;
-	if( !msg.startsWith( prefix + 'role' ) ) return;
+	if( !msg.startsWith( '$role' ) ) return;
 	if(!message.member.hasPermission('MANAGE_ROLES')) return message.channel.send(' **__ليس لديك صلاحيات__**');
 	if( msg.toLowerCase().startsWith( prefix + 'role' ) ){
 		if( !args[0] ) return message.reply( '**:x: يرجى وضع الشخص المراد سحب منه الرتبة**' );
@@ -1194,7 +1205,7 @@ client.on('message', message => {
   
  
 
-if (command == "embed") {
+if (command == "em") {
     let say = new Discord.RichEmbed()
     .setDescription(args.join("  "))
     .setColor(0x23b2d6)
