@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 client.on('ready', function(){
     var ms = 10000 ;
-    var setGame = [' $help','KillerBot','By KillerFox',' Game and **',' $help'];
+    var setGame = [' $help','KillerBot','By KillerFox',' KillerBot ',' $help'];
     var i = -1;
     var j = 0;
     setInterval(function (){
@@ -558,7 +558,7 @@ client.on('message', message => {
 .addField(' عدد الاعضاء ',` [${client.users.size}] `)
 .addField('الغرف ',`[${client.channels.size}]`) 
 .addField(' البنق ',`[${Date.now() - message.createdTimestamp}]`) 
-.addField(' Devolope By MrKayan ')
+.addField(' Devolope By fox ')
 .setColor('#7d2dbe')
   message.channel.sendEmbed(embed);
     }
